@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 
 
 function Info(props) {
+let aboutStyle = {
+  fontSize: "50px"
+}
   return (
 
 
 
-  <div>
-    <h3>{props.name}</h3>
-      <h5>{props.college}</h5>
-      <h5>{props.age}</h5>
-      <h5>{props.quote}</h5>
+  <div style={aboutStyle}>
+    <h3> name: {props.name}</h3>
+      <h5> college: {props.college}</h5>
+      <h5>age: {props.age}</h5>
+      <h5>quote: {props.quote}</h5>
   </div>
 
 
