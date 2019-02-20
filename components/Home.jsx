@@ -1,8 +1,8 @@
 import React from 'react';
-import lawrence from '/Users/guest/desktop/yearbook/src/assets/images/lawrence.jpg';
-import lumberg from '/Users/guest/desktop/yearbook/src/assets/images/lumberg.jpg';
-import peter from '/Users/guest/desktop/yearbook/src/assets/images/peter.jpg';
-import stapler from '/Users/guest/desktop/yearbook/src/assets/images/stapler.jpg';
+import lawrence from '../src/assets/images/lawrence.jpg';
+import lumberg from '../src/assets/images/lumberg.jpg';
+import peter from '../src/assets/images/peter.jpg';
+import stapler from '../src/assets/images/stapler.jpg';
 import { Link } from 'react-router-dom';
 
 function Home(){

@@ -1,8 +1,8 @@
 import React from 'react';
-import lawrence from '/Users/guest/desktop/yearbook/src/assets/images/lawrence.jpg';
+import lawrence from '../src/assets/images/lawrence.jpg';
 import { Link } from 'react-router-dom';
-import {yearBookInfo} from '/Users/guest/desktop/yearbook/src/info.js';
-import Info from '/Users/guest/desktop/yearbook/components/Info.jsx';
+import {yearBookInfo} from '../src/info.js';
+import Info from '../components/Info.jsx';
 
 function Lawrence(){
   let picLayout = {

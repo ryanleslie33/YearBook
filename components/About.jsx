@@ -1,6 +1,6 @@
 import React from 'react';
-import Info from '/Users/guest/desktop/yearbook/components/Info.jsx';
-import {yearBookInfo} from '/Users/guest/desktop/yearbook/src/info.js';
+import Info from '../components/Info.jsx';
+import {yearBookInfo} from '../src/info.js';
 
 
 function About(){

@@ -9,23 +9,43 @@ import About from './About.jsx';
 import Header from './Header.jsx';
 import AddForm from './AddForm.jsx';
 import NewFormControll from './NewFormControll';
+import PeopleList from './PeopleList';
+import PropTypes from 'prop-types';
 
 
 
-function App(){
-  return (
-    <div>
-    <Header/>
+class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterPeopleList: []
+    };
+    this.handleAddingNewPersonToList = this.handleAddingNewPersonToList.bind(this);
+  }
+  handleAddingNewPersonToList(newPerson) {
+    var newMasterPeopleList = this.state.masterPeopleList.slice();
+    newMasterPeopleList.push(newPerson);
+    this.setState({masterPeopleList: newMasterPeopleList});
+  }
+  render(){
+
+
+    return (
+      <div>
+      <Header/>
       <Switch>
-  <Route exact path='/' component={Home} />
-  <Route exact path='/stapler' component={Stapler} />
-  <Route exact path='/lumberg' component={Lumberg} />
-  <Route exact path='/lawrence' component={Lawrence} />
-  <Route exact path='/peter' component={Peter} />
-    <Route exact path='/addForm' component={AddForm} />
+      <Route exact path='/thing' render={()=><PeopleList peopleList={this.state.masterPeopleList} />} />
+      <Route path='/addform' render={()=><AddForm onNewPersonCreation={this.handleAddingNewPersonToList} />} />
+      <Route exact path='/' component={Home} />
+      <Route exact path='/stapler' component={Stapler} />
+      <Route exact path='/lumberg' component={Lumberg} />
+      <Route exact path='/lawrence' component={Lawrence} />
+      <Route exact path='/peter' component={Peter} />
+
       </Switch>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

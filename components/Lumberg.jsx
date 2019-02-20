@@ -1,8 +1,8 @@
 import React from 'react';
-import lumberg from '/Users/guest/desktop/yearbook/src/assets/images/lumberg.jpg';
+import lumberg from '../src/assets/images/lumberg.jpg';
 import { Link } from 'react-router-dom';
-import {yearBookInfo} from '/Users/guest/desktop/yearbook/src/info.js';
-import Info from '/Users/guest/desktop/yearbook/components/Info.jsx';
+import {yearBookInfo} from '../src/info.js';
+import Info from '../components/Info.jsx';
 
 function Lumberg(){
   let picLayout = {
